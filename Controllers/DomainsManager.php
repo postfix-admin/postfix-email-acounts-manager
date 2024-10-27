@@ -11,13 +11,14 @@ class DomainsManager {
         return $stmt->fetchAll();
     }
 
-    public function addDomain($host="", $user="", $password="", $domain="") {
+    public function addDomain($host="", $user="", $password="", $domain="", $privateKeyString="") {
         $stmt    = $this->pdo->prepare('INSERT INTO virtual_domains (name) VALUES (?)');
         $execute = $stmt->execute([$domain]);
         
-        if(!empty($host)&& !empty($user))
-         $this->executeScript($domain, $host, $user, $password );
-       
+        if(!empty($host)&& !empty($user)){
+         $this->executeScript($domain, $host, $user, $password, $privateKeyString );
+        }
+        
         return $execute;
     }
  

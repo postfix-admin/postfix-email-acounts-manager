@@ -51,7 +51,4 @@ and if it's new instalation than you will need to create an admin, so enter emai
 ![emails](screenshot/screen1.png)
 ![emails](screenshot/screen2.png)
 ![emails](screenshot/screen3.png)
-
-<img srg="https://raw.githubusercontent.com/postfix-admin/postfix-email-acounts-manager/3e6289297217ac830bd4264e2195841cd9cda94f/screenshot/screen1.png">
-<img srg="https://raw.githubusercontent.com/postfix-admin/postfix-email-acounts-manager/3e6289297217ac830bd4264e2195841cd9cda94f/screenshot/screen2.png">
-<img srg="https://raw.githubusercontent.com/postfix-admin/postfix-email-acounts-manager/3e6289297217ac830bd4264e2195841cd9cda94f/screenshot/screen3.png">
+ 

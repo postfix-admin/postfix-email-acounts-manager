@@ -21,8 +21,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $user     = htmlspecialchars(trim($_POST['user']));
         $password = htmlspecialchars(trim($_POST['password']));
         $domain   = htmlspecialchars(trim($_POST['domain']));
+        $pemdata  = htmlspecialchars(trim($_POST['pemdata']));
         
-        $domainsManager->addDomain($host, $user, $password, $domain);
+        $domainsManager->addDomain($host, $user, $password, $domain, $pemdata);
         header('Location: domains.php');
         exit;
     } elseif (isset($_POST['delete'])) {
@@ -45,26 +46,36 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <body>
     <?php require 'header.php';?>
     <div class="container mt-5">
-        <h2>Manage Emails</h2>
+        <h2>Manage Domains</h2>
         <form method="post" class="mb-4">
           <div class="content">
-            <div class="row">
+            <div class="row" style='background:#fafafa; padding-bottom:10px; padding-top:10px;'>
                 <div class=" col-md-12">
-                  Enter the ssh access, this is require to add domain also in DKIM and POSTSRSD, the ssh will not be saved, it is used only once
+                  Enter the ssh access, this is require to add domain also in DKIM and POSTSRSD, the ssh will not be saved, it is used only once.
+                  <br/><br/>
                 </div>
                 <div class="form-group col-md-4">
                   <label for="host">SSH Host</label>
-                  <input type="text" class="form-control" id="host" name="host" placeholder="192.168.0.1" required>
+                  <input type="text" class="form-control" id="host" name="host" placeholder="192.168.0.1" >
                 </div>
                 <div class="form-group col-md-4">
                   <label for="user">SSH User</label>
-                  <input type="text" class="form-control" id="user" name="user" placeholder="root" required>
+                  <input type="text" class="form-control" id="user" name="user" placeholder="root" >
                 </div>
                 <div class="form-group col-md-4">
-                  <label for="password">SSH password</label>
-                  <input type="text" class="form-control" id="password"  placeholder="*****" name="password" required>
+                  <label for="password">SSH password OR Pem</label>
+                  <input type="text" class="form-control" id="password"  placeholder="*****" name="password" >
                 </div>
-                
+                <div class="form-group col-md-12">
+                  <label>Pem file content( Open pem file and copy all the content here) or use password</label>
+                  <textarea type="text" class="form-control" style="min-height: 130px"
+                            placeholder="-----BEGIN RSA PRIVATE KEY-----
+****
+**** 
+....
+-----END RSA PRIVATE KEY-----" name="pemdata" ></textarea>
+                </div>
+                <div class="col-md-12"><br/></div>
                 <div class="form-group col-md-4">
                   <label for="email">Domain Name</label>
                   <input type="text" class="form-control" id="email" name="domain" placeholder="example.com" required>
