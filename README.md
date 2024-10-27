@@ -1,7 +1,7 @@
 # Postfix email acounts manager
 This is a Postfix Email accounts manager like add/create/delete
 
-#Install this on your nginx or apach server
+# Instruction to install the script on nginx or apach server
 
 The installation it's preaty simple
 1) install ssh2 php library depend on witch php version you use you may replace this part with your need php8.2-ssh2 OR php8.3-ssh2 OR php8.4-ssh2
@@ -47,7 +47,7 @@ and save the file
 8) open the domain where you install the script like mailcontrol.yourdomain.com
 and if it's new instalation than you will need to create an admin, so enter email and password for admin
 
-##photos
+## photos
 ![emails](screenshot/screen1.png)
 ![emails](screenshot/screen2.png)
 ![emails](screenshot/screen3.png)
