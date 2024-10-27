@@ -21,7 +21,8 @@ php -m | grep ssh2
 
 5) copy and unzip files in the location where you want
 6) open the database for postfix and check if this table "virtual_admins" exist, if not exist add it: 
-    CREATE TABLE `virtual_admins` (
+  ```  
+  CREATE TABLE `virtual_admins` (
       `id` int(11) NOT NULL auto_increment,
       `email` varchar(200) NOT NULL,
       `password` varchar(200) NOT NULL,
@@ -31,7 +32,7 @@ php -m | grep ssh2
       `date_log` datetime DEFAULT NULL,
       PRIMARY KEY (`id`) 
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8
-
+```
 
 7) open config/config.php and add postfix database credential you can find them in: /etc/postfix/mysql-virtual-alias-maps.cf
 
