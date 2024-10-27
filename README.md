@@ -52,3 +52,4 @@ and if it's new instalation than you will need to create an admin, so enter emai
 ![emails](screenshot/screen2.png)
 ![emails](screenshot/screen3.png)
  
+@Author Corneli F.
