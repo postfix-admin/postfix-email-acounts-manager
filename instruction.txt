@@ -1,0 +1,14 @@
+1) install ssh2 php library depend on witch php version you use you may replace this part with your need php8.2-ssh2 OR php8.3-ssh2 OR php8.4-ssh2
+check php version: php -version
+sudo apt install php8.3-ssh2
+ 
+2) add this line in php.ini 
+extension=ssh2
+
+
+3) restart appach or niginx
+sudo service apache2 restart
+sudo service nginx restart
+
+4) check if ssh2 is active 
+php -m | grep ssh2
