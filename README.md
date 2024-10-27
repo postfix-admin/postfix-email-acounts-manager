@@ -42,5 +42,7 @@ $user = 'database user'; // Your database username
 $pass = 'password'; // Your database password
 
 and save the file
+
+
 8) open the domain where you install the script like mailcontrol.yourdomain.com
 and if it's new instalation than you will need to create an admin, so enter email and password for admin
