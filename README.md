@@ -35,14 +35,19 @@ php -m | grep ssh2
 ```
 
 7) open config/config.php and add postfix database credential you can find them in: /etc/postfix/mysql-virtual-alias-maps.cf
-
+``` 
 $host = 'localhost'; // Your database host
 $db   = 'database name'; // Your database name
 $user = 'database user'; // Your database username
 $pass = 'password'; // Your database password
-
+``` 
 and save the file
 
 
 8) open the domain where you install the script like mailcontrol.yourdomain.com
 and if it's new instalation than you will need to create an admin, so enter email and password for admin
+
+##photos
+<img srg="https://raw.githubusercontent.com/postfix-admin/postfix-email-acounts-manager/3e6289297217ac830bd4264e2195841cd9cda94f/screenshot/screen1.png">
+<img srg="https://raw.githubusercontent.com/postfix-admin/postfix-email-acounts-manager/3e6289297217ac830bd4264e2195841cd9cda94f/screenshot/screen2.png">
+<img srg="https://raw.githubusercontent.com/postfix-admin/postfix-email-acounts-manager/3e6289297217ac830bd4264e2195841cd9cda94f/screenshot/screen3.png">
